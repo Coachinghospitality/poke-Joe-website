@@ -45,3 +45,9 @@ Prices are GBP. Each available card needs a valid HTTPS eBay listing URL. Use `s
 Keep the source in this GitHub repository and connect it to a static host appropriate for a commercial showcase. The host should publish the repository root and needs no build command. Do not add a custom-domain file until a domain has been purchased and configured.
 
 GitHub Pages is not the recommended host for this sales-focused site: [its usage limits restrict sites primarily directed at facilitating commercial transactions](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits). Uploading this repository does not automatically publish a live website.
+
+## Homepage design and photos
+
+The homepage uses Lilita One headings and Nunito body text (loaded from Google Fonts), a lilac and mint background, and a gently floating `pokeball.png`. The motion can be paused in the footer and respects reduced-motion preferences.
+
+The homepage uses Joe’s uploaded `frontpagecard1.jpeg`, `frontpagecard2.jpeg`, and `frontpagecard3.jpeg`. Replace them using GitHub’s **Add file → Upload files**. Each photo is framed and slightly enlarged using CSS; the original is not altered. The ungraded Charizard uses a tighter crop while the slab images retain their grading labels. If changing subjects, update the caption, alt text and crop in `index.html` / `style.css` too. Homepage photos link to the seller page, so they are a collection showcase rather than a promise of current stock. The card gallery remains separately maintained in `site-data.js`.

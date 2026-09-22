@@ -1,5 +1,10 @@
 (() => {
   'use strict';
+  const motionButton = document.querySelector('.motion-toggle');
+  let paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const updateMotion = () => { document.body.classList.toggle('motion-paused', paused); motionButton.setAttribute('aria-pressed', String(paused)); motionButton.textContent = paused ? 'Play background motion' : 'Pause background motion'; };
+  updateMotion();
+  motionButton.addEventListener('click', () => { paused = !paused; updateMotion(); });
   const data = window.POKEJOE || { cards: [] };
   function ebayLink(value) {
     try { const u = new URL(value); return u.protocol === 'https:' && /(^|\.)ebay\.(co\.uk|com)$/.test(u.hostname) ? u.href : null; } catch { return null; }
