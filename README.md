@@ -51,3 +51,9 @@ GitHub Pages is not the recommended host for this sales-focused site: [its usage
 The homepage uses Lilita One headings and Nunito body text (loaded from Google Fonts), a lilac and mint background, and a gently floating `pokeball.png`. The motion can be paused in the footer and respects reduced-motion preferences.
 
 The homepage uses Joe’s uploaded `frontpagecard1.jpeg`, `frontpagecard2.jpeg`, and `frontpagecard3.jpeg`. Replace them using GitHub’s **Add file → Upload files**. Each photo is framed and slightly enlarged using CSS; the original is not altered. The ungraded Charizard uses a tighter crop while the slab images retain their grading labels. If changing subjects, update the caption, alt text and crop in `index.html` / `style.css` too. Homepage photos link to the seller page, so they are a collection showcase rather than a promise of current stock. The card gallery remains separately maintained in `site-data.js`.
+
+## Featured eBay listings and buying cards
+
+The collection contains a manually checked snapshot of the six highest-priced active listings found across the seller profile on 22 September 2026, including the MTG Final Fantasy bundle. Display prices are the buyer-facing eBay item prices, excluding postage. Links go directly to each listing. Images currently load from eBay’s image host; they are not copied into the repository and may stop loading if removed by eBay. Local `images/cards/` files remain supported. There is no automatic price or sold-status sync.
+
+The “Sell your cards” section offers 75% of agreed market value based on comparable sold listings, condition and grade. Both email links open a draft addressed to joe.rbwork@gmail.com. Clicking does not send an email automatically.

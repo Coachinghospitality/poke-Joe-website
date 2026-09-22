@@ -9,6 +9,11 @@
   function ebayLink(value) {
     try { const u = new URL(value); return u.protocol === 'https:' && /(^|\.)ebay\.(co\.uk|com)$/.test(u.hostname) ? u.href : null; } catch { return null; }
   }
+  function cardImage(value) {
+    if (typeof value !== 'string') return false;
+    if (/^images\/cards\/[^?#]+\.(jpg|jpeg|png|webp)$/i.test(value) && !value.includes('..')) return true;
+    try { const url = new URL(value); return url.protocol === 'https:' && url.hostname === 'i.ebayimg.com'; } catch { return false; }
+  }
   const shop = ebayLink(data.ebayUrl);
   if (shop) document.querySelectorAll('[data-shop]').forEach(a => { a.href = shop; a.hidden = false; });
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -21,8 +26,9 @@
     // A card cannot be advertised for sale until it has a valid listing link.
     if (card.status === 'available' && !listing) return;
     const article = create('article', 'card');
-    const photo = create('div', 'card-photo');
-    if (typeof card.image === 'string' && /^images\/cards\/[^?#]+\.(jpg|jpeg|png|webp)$/i.test(card.image) && !card.image.includes('..')) {
+    const photo = create(listing ? 'a' : 'div', 'card-photo');
+    if (listing) photo.href = listing;
+    if (cardImage(card.image)) {
       const img = create('img'); img.src = card.image; img.alt = card.name + (card.condition ? ' — ' + card.condition : ''); img.loading = 'lazy';
       img.addEventListener('error', () => { img.remove(); photo.textContent = 'Photo coming soon'; }); photo.append(img);
     } else photo.textContent = 'Photo coming soon';
