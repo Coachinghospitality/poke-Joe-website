@@ -20,3 +20,8 @@ body{overflow-x:clip}.showcase-card span{font-size:12px}
 @media(max-width:620px){.hero-art.card-fan{width:calc(100% - 24px)}.hero{padding-top:25px;gap:10px}.hero-actions{margin-top:23px}.hero-note{margin-top:23px}.hero-art.card-fan{height:350px}}
 
 .hero-art .showcase-one img,.hero-art .showcase-three img{transform:scale(1.08);object-position:center center}.hero-art .showcase-two img{transform:scale(1.32);object-position:center center}
+
+/* A personal photo keeps the About section simple and welcoming. */
+.about{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);align-items:center;gap:42px}.about-photo{padding:8px;background:#fff9ec;border:2px solid var(--ink);border-radius:12px;box-shadow:4px 5px 0 #25223e25}.about-photo img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:5px}.about-copy{padding-top:0}.about-copy .eyebrow{font-size:12px;margin-bottom:14px}.about-copy h2{margin-bottom:20px}
+@media(max-width:900px){.about{gap:26px}}
+@media(max-width:620px){.about{grid-template-columns:1fr;gap:28px}.about-photo{max-width:360px;width:100%;margin-inline:auto}.about-copy .eyebrow{font-size:11px}}
