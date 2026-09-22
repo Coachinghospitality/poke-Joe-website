@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Poke-Joe — a UK Pokémon collector. Explore the cards, discover your next favourite and shop through eBay.">
+  <meta name="theme-color" content="#082f32">
+  <title>Poke-Joe | Cards with character</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="site-data.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header wrap">
+    <a class="wordmark" href="#" aria-label="Poke-Joe home">POKE<span>—</span>JOE<span class="pixel">✦</span></a>
+    <nav aria-label="Main navigation"><a href="#cards">The cards</a><a href="#about">Meet Joe</a><a class="nav-shop" data-shop hidden>Shop on eBay <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> UK COLLECTOR • POKÉMON CARDS</p>
+        <h1 id="hero-title">Small cards.<br>Big <span>nostalgia.</span></h1>
+        <p class="intro">For the binder builders, the favourite-Pokémon collectors and the ones who never really grew out of it.</p>
+        <div class="hero-actions"><a class="button yellow" href="#cards">Explore the cards <span aria-hidden="true">↓</span></a><a class="text-link" data-shop hidden>Visit my eBay <span aria-hidden="true">↗</span></a></div>
+        <p class="hero-note">A little corner of the hobby. Welcome to Poke-Joe.</p>
+      </div>
+      <div class="hero-art"><div class="art-label">COLLECT WHAT YOU LOVE</div><img src="logo.png" width="2000" height="2000" alt="Poke-Joe: a colourful retro handheld console with pixel hearts and trophies"><span class="art-stamp">PLAYER 01<br><strong>JOE</strong></span></div>
+    </section>
+    <div class="ticker" aria-hidden="true"><div>THE NEXT BINDER FAVOURITE <span>✦</span> THE CHILDHOOD CHASE <span>✦</span> THE ONE YOU MISSED <span>✦</span> THE NEXT BINDER FAVOURITE <span>✦</span></div></div>
+    <section class="collection wrap" id="cards" aria-labelledby="cards-title">
+      <div class="section-heading"><div><p class="eyebrow">THE COLLECTION</p><h2 id="cards-title">Find your next favourite.</h2></div><a class="text-link" data-shop hidden>All listings on eBay ↗</a></div>
+      <p class="section-intro">A closer look at the cards. Purchases are completed on eBay, where you’ll find the latest price and availability.</p>
+      <div class="card-grid" id="available-cards"></div>
+      <div class="empty-state" id="empty-cards"><span class="empty-icon" aria-hidden="true">✦</span><div><h3>The next chapter is on its way.</h3><p>Card photos are coming soon. Check back for a closer look at the collection.</p><a class="text-link" data-shop hidden>See what’s available on eBay ↗</a></div></div>
+      <noscript><p>Enable JavaScript to see individual card listings.</p></noscript>
+    </section>
+    <section class="sold-section wrap" id="sold-section" hidden aria-labelledby="sold-title"><p class="eyebrow">THE ONES THAT FOUND A HOME</p><h2 id="sold-title">Previously in the collection.</h2><div class="card-grid" id="sold-cards"></div></section>
+    <section class="about wrap" id="about" aria-labelledby="about-title"><div class="about-heading"><p class="eyebrow">THE COLLECTOR BEHIND THE CARDS</p><h2 id="about-title">Hey, I’m Joe.<br>Still collecting.</h2><span class="hearts" aria-hidden="true">♥ ♥ ♥</span></div><div class="about-copy"><p>Poke-Joe is my little corner of the Pokémon hobby: a UK collector sharing cards with other people who love them.</p><p>Whether you’re filling a gap in your binder or rediscovering an old favourite, have a look around. You’ll find my available listings on eBay.</p><a class="button dark" data-shop hidden>Meet me on eBay ↗</a></div></section>
+  </main>
+  <footer class="wrap footer"><div><a class="wordmark" href="#">POKE<span>—</span>JOE</a><p>Collect what you love.</p></div><div class="footer-small"><p>© <span id="year">2026</span> Poke-Joe</p><p>Independent collector. Not affiliated with Pokémon, Nintendo or eBay.</p></div></footer>
+</body>
+</html>
